@@ -4,6 +4,7 @@
 void getNumbers (int *, int *); // Prototype of the function
 void displaynumbers(int, int); //Prototype of the function
 char menu();
+void showresults (char, int, int);
 
 //--------------------------------------------
 int main(){
@@ -51,12 +52,12 @@ do {
 if( firstry == 0)
     printf("\n\nSorry try again \n");
 
-    printf("\nWelcome to my program\n");
-    printf("\nChoose from the following menu:\n");
+    printf("\tWelcome to my program ----------------");
+    printf("\n\t\tChoose from the following menu:\n");
 
-    printf("a/A : to print the sum of the numbers\n");
-    printf("\np/P : to print the product of the numbers\n");
-    printf("\nd/D : to print the divsion of the first numbers by the second number\n");
+    printf("\n\t\ta/A : to print the sum of the numbers\n");
+    printf("\n\t\tp/P : to print the product of the numbers\n");
+    printf("\n\t\td/D : to print the divsion of the first numbers by the second number\n");
 
     printf("\nEnter your selection: ");
     scanf("%c", &option);
