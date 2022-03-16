@@ -46,17 +46,22 @@ printf("\nYou entered %d and %d", number1, number2);
 char menu(){
     
     char option;
+    int firstry = 1;
 do {
+if( firstry == 0)
+    printf("\n\nSorry try again \n");
+
     printf("\nWelcome to my program\n");
-    printf("Choose from the following menu:\n");
+    printf("\nChoose from the following menu:\n");
 
     printf("a/A : to print the sum of the numbers\n");
-    printf("p/P : to print the product of the numbers\n");
-    printf("d/D : to print the divsion of the first numbers by the second number\n");
+    printf("\np/P : to print the product of the numbers\n");
+    printf("\nd/D : to print the divsion of the first numbers by the second number\n");
 
-    printf("Enter your selection: ");
+    printf("\nEnter your selection: ");
     scanf("%c", &option);
     option = toupper(option);
+    firstry = 0;
 
 }while (option != 'A' && option != 'P' && option != 'D' );
 
