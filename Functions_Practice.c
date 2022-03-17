@@ -5,22 +5,36 @@ void getNumbers (int *, int *); // Prototype of the function
 void displaynumbers(int, int); //Prototype of the function
 char menu();
 void showresults (char, int, int);
+int add (int, int);
+int multiply(int, int);
+float divide(int, int);
 
+//---------------------------------------
+int add( int a, int b){
+
+    return a+b;
+}
+
+int multiply(int a, int b)
+{
+    
+    return a*b;
+}
+
+float divide(int a, int b){
+
+    return a/b;
+}
 //--------------------------------------------
 int main(){
     
     int x = 0, y = 0;
+
+    getNumbers(&x,&y)
     
-    //getNumbers(&x,&y);
+  
 
-   //displaynumbers(x,y);
-
-   char selection;
-
-   selection = menu();
-
-   printf("you have selected %c", selection);
-
+  
     return 0;
 
 }// End of Main
@@ -72,3 +86,25 @@ return option;
 }//End of menu
 
 //----------------------------------------------------------
+
+void showresults(char option, int first, int second){
+
+    switch(option)
+    {
+        case 'A': printf("\t\t%d + %d = %d", first, second, add(first,second));
+        break;
+
+        case 'P': printg("\t\t%d * %d = %d", first, second, multiply(first, second));
+        break;
+
+        case 'D': if( second !== 0)
+        printg("\t\t%d / %d = %d", first, second, divide(first, second));
+        
+        else
+        printf("Sorry you cannot divide by zero\n");
+        
+        break;
+
+    }
+
+}//End of show results
